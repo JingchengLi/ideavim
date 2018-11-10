@@ -1,11 +1,21 @@
-buildscript {
-  repositories {
-    mavenCentral()
-  }
-
-  dependencies {
-    classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
-  }
+buildscript { 
+	repositories { 
+		maven { url 'https://plugins.gradle.org/m2/' }
+		maven { url 'https://maven.aliyun.com/repository/google' }
+		maven { url 'https://maven.aliyun.com/repository/public' } 
+		maven { url 'https://maven.aliyun.com/repository/jcenter'} 
+	}
+	allprojects { 
+		repositories { 
+		maven { url 'https://plugins.gradle.org/m2/' }
+		maven { url 'https://maven.aliyun.com/repository/google' }
+		maven { url 'https://maven.aliyun.com/repository/public' } 
+		maven { url 'https://maven.aliyun.com/repository/jcenter'} 
+		} 
+	}
+	dependencies {
+		classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+	}
 }
 
 plugins {
@@ -45,7 +55,12 @@ intellij {
 }
 
 repositories {
-  mavenCentral()
+  //mavenCentral()
+	maven { url 'https://plugins.gradle.org/m2/' }
+	maven { url 'https://maven.aliyun.com/repository/google' }
+	maven { url 'https://maven.aliyun.com/repository/public' } 
+		maven { url 'https://maven.aliyun.com/repository/jcenter'} 
+
 }
 
 dependencies {
